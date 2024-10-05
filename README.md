@@ -21,7 +21,7 @@ smtplib (for email)
 gzip and shutil (for compression)
 threading (for multitasking)
 
-# Before running this codeS
+# Before running this code
 Set up environment variables for EMAIL_ADDRESS,EMAIL_PASSWORD,RECEIVER_EMAIL;
 Set up LOG_DIR as the path of the directory where you want to store your keystroke captures;
 
